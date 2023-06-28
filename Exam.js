@@ -5,6 +5,7 @@ var bp=require('body-parser');
 
 app.use(bp.urlencoded({extended:false}))
 app.listen(9000, function(req,res){console.log("server started")});
+app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/getform',function(req,res)
 {	
